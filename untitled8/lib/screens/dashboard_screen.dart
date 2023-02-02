@@ -1,4 +1,8 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:untitled8/screens/video_call_screen.dart';
 
 import 'Journal.dart';
 
@@ -109,7 +113,7 @@ class _DashBordState extends State<DashBord> {
                           ),
                         ),
                         onTap: () {
-                          Navigator.pop(context);
+                          Get.to(() => VideoCallScreen());
                         },
                       ),
                       ListTile(
@@ -126,7 +130,8 @@ class _DashBordState extends State<DashBord> {
                           ),
                         ),
                         onTap: () {
-                          Navigator.pop(context);
+                          Get.to(() => VideoCallScreen());
+                          // Navigator.pop(context);
                         },
                       ),
                       ListTile(
@@ -447,33 +452,38 @@ class _DashBordState extends State<DashBord> {
                 child: Row(
                   children: [
                     Expanded(
-                      child: Container(
-                        height: 130,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10),
-                            color: Color(0Xff04636b)),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Icon(
-                              Icons.calendar_month,
-                              size: 60,
-                              color: Color(0XffFFFFFF),
-                            ),
-                            // Text("12",
-                            //     style: TextStyle(
-                            //         fontWeight: FontWeight.w400,
-                            //         fontSize: 18,
-                            //         color: Colors.blue)),
-                            // SizedBox(
-                            //   height: 15,
-                            // ),
-                            Text("Schedule",
-                                style: TextStyle(
-                                    fontWeight: FontWeight.w400,
-                                    fontSize: 18,
-                                    color: Colors.white)),
-                          ],
+                      child: InkWell(
+                        onTap: () {
+                          Get.to(() => VideoCallScreen());
+                        },
+                        child: Container(
+                          height: 130,
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10),
+                              color: Color(0Xff04636b)),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Icon(
+                                Icons.calendar_month,
+                                size: 60,
+                                color: Color(0XffFFFFFF),
+                              ),
+                              // Text("12",
+                              //     style: TextStyle(
+                              //         fontWeight: FontWeight.w400,
+                              //         fontSize: 18,
+                              //         color: Colors.blue)),
+                              // SizedBox(
+                              //   height: 15,
+                              // ),
+                              Text("Schedule",
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.w400,
+                                      fontSize: 18,
+                                      color: Colors.white)),
+                            ],
+                          ),
                         ),
                       ),
                     ),

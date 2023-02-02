@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:syncfusion_flutter_charts/sparkcharts.dart';
 
-import 'DashBord.dart';
+import 'dashboard_screen.dart';
 
 class Journal extends StatefulWidget {
   const Journal({Key? key}) : super(key: key);
