@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 import 'package:get/get.dart';
+import 'package:untitled8/main.dart';
 import 'package:untitled8/screens/dashboard_screen.dart';
-import 'package:untitled8/screens/video_call_screen.dart';
+import 'package:untitled8/screens/login_screen.dart';
+import 'package:untitled8/screens/mcq_upload_screen.dart';
 import 'package:untitled8/utils/ui_helpers.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -37,7 +37,7 @@ class _SplashScreenState extends State<SplashScreen> {
                   //     return const Authenticate();
                   //   },
                   // ));
-                  Get.off(() => DashBord());
+                  Get.off(() => const Authenticate());
                 },
                 child: Align(
                   alignment: Alignment.bottomCenter,

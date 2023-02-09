@@ -38,18 +38,19 @@ class _JournalState extends State<Journal> {
                       SizedBox(
                         height: 110,
                         child: DrawerHeader(
-                            decoration: BoxDecoration(
-                              color: Color(0xff04636b),
-                            ),
-                            child: Row(
-                              children: const [
-                                Text(
-                                  "Quick Access",
-                                  style: TextStyle(
-                                      color: Color(0XffFFFFFF), fontSize: 18),
-                                ),
-                              ],
-                            )),
+                          decoration: BoxDecoration(
+                            color: Color(0xff04636b),
+                          ),
+                          child: Row(
+                            children: const [
+                              Text(
+                                "Quick Access",
+                                style: TextStyle(
+                                    color: Color(0XffFFFFFF), fontSize: 18),
+                              ),
+                            ],
+                          ),
+                        ),
                       ),
                       ListTile(
                         leading: Icon(

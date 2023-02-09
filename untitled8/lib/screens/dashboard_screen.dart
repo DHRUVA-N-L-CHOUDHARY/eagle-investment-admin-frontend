@@ -2,6 +2,7 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:untitled8/screens/course_details_uploadscreen.dart';
 import 'package:untitled8/screens/video_call_screen.dart';
 
 import 'Journal.dart';
@@ -524,28 +525,188 @@ class _DashBordState extends State<DashBord> {
                   ],
                 ),
               ),
-              Container(
-                margin: EdgeInsets.symmetric(vertical: 15, horizontal: 16),
-                height: 48,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(40),
-                  color: Colors.red,
-                ),
-                child: ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.red,
-                    disabledForegroundColor:
-                        Colors.transparent.withOpacity(0.38),
-                    disabledBackgroundColor:
-                        Colors.transparent.withOpacity(0.12),
-                    shadowColor: Colors.transparent,
-                  ),
-                  onPressed: () {},
-                  child: Center(
-                    child: Icon(Icons.wifi_calling_3),
-                  ),
+              SizedBox(
+                height: 10,
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                child: Row(
+                  children: [
+                    Expanded(
+                      child: InkWell(
+                        onTap: () {
+                          Get.to(() => Coursesdetailsuploadscreen());
+                        },
+                        child: Container(
+                          height: 130,
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10),
+                              color: Color(0Xff04636b)),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Icon(
+                                Icons.create_new_folder_sharp,
+                                size: 60,
+                                color: Color(0XffFFFFFF),
+                              ),
+                              // Text("12",
+                              //     style: TextStyle(
+                              //         fontWeight: FontWeight.w400,
+                              //         fontSize: 18,
+                              //         color: Colors.blue)),
+                              // SizedBox(
+                              //   height: 15,
+                              // ),
+                              Text("Create Topic",
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.w400,
+                                      fontSize: 18,
+                                      color: Colors.white)),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                    SizedBox(
+                      width: 15,
+                    ),
+                    Expanded(
+                      child: Container(
+                        height: 130,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
+                            color: Color(0Xff04636b)),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Icon(
+                              Icons.video_call_outlined,
+                              size: 60,
+                              color: Color(0XffFFFFFF),
+                            ),
+                            // Text("12",
+                            //     style: TextStyle(
+                            //         fontWeight: FontWeight.w400,
+                            //         fontSize: 18,
+                            //         color: Colors.blue)),
+                            // SizedBox(
+                            //   height: 15,
+                            // ),
+                            Text("Upload Video",
+                                style: TextStyle(
+                                    fontWeight: FontWeight.w400,
+                                    fontSize: 18,
+                                    color: Colors.white)),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
               ),
+               SizedBox(
+                height: 10,
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                child: Row(
+                  children: [
+                    Expanded(
+                      child: InkWell(
+                        onTap: () {
+                          Get.to(() => VideoCallScreen());
+                        },
+                        child: Container(
+                          height: 130,
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10),
+                              color: Color(0Xff04636b)),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Icon(
+                                Icons.create_new_folder_sharp,
+                                size: 60,
+                                color: Color(0XffFFFFFF),
+                              ),
+                              // Text("12",
+                              //     style: TextStyle(
+                              //         fontWeight: FontWeight.w400,
+                              //         fontSize: 18,
+                              //         color: Colors.blue)),
+                              // SizedBox(
+                              //   height: 15,
+                              // ),
+                              Text("Upload MCQ",
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.w400,
+                                      fontSize: 18,
+                                      color: Colors.white)),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                    SizedBox(
+                      width: 15,
+                    ),
+                    Expanded(
+                      child: Container(
+                        height: 130,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
+                            color: Color(0Xff04636b)),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Icon(
+                              Icons.video_call_outlined,
+                              size: 60,
+                              color: Color(0XffFFFFFF),
+                            ),
+                            // Text("12",
+                            //     style: TextStyle(
+                            //         fontWeight: FontWeight.w400,
+                            //         fontSize: 18,
+                            //         color: Colors.blue)),
+                            // SizedBox(
+                            //   height: 15,
+                            // ),
+                            Text("Upload Study Material",
+                                style: TextStyle(
+                                    fontWeight: FontWeight.w400,
+                                    fontSize: 15,
+                                    color: Colors.white)),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              // Container(
+              //   margin: EdgeInsets.symmetric(vertical: 15, horizontal: 16),
+              //   height: 48,
+              //   decoration: BoxDecoration(
+              //     borderRadius: BorderRadius.circular(40),
+              //     color: Colors.red,
+              //   ),
+              //   child: ElevatedButton(
+              //     style: ElevatedButton.styleFrom(
+              //       backgroundColor: Colors.red,
+              //       disabledForegroundColor:
+              //           Colors.transparent.withOpacity(0.38),
+              //       disabledBackgroundColor:
+              //           Colors.transparent.withOpacity(0.12),
+              //       shadowColor: Colors.transparent,
+              //     ),
+              //     onPressed: () {},
+              //     child: Center(
+              //       child: Icon(Icons.wifi_calling_3),
+              //     ),
+              //   ),
+              // ),
             ],
           ),
         ),
