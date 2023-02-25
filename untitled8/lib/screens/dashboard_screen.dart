@@ -3,6 +3,7 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:untitled8/screens/course_details_uploadscreen.dart';
+import 'package:untitled8/screens/schedule_screen.dart';
 import 'package:untitled8/screens/video_call_screen.dart';
 
 import 'Journal.dart';
@@ -412,33 +413,38 @@ class _DashBordState extends State<DashBord> {
                       width: 15,
                     ),
                     Expanded(
-                      child: Container(
-                        height: 130,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10),
-                            color: Color(0Xff04636b)),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Icon(
-                              Icons.wifi,
-                              size: 60,
-                              color: Color(0XffFFFFFF),
-                            ),
-                            // Text("12",
-                            //     style: TextStyle(
-                            //         fontWeight: FontWeight.w400,
-                            //         fontSize: 18,
-                            //         color: Colors.blue)),
-                            // SizedBox(
-                            //   height: 15,
-                            // ),
-                            Text("Go Live",
-                                style: TextStyle(
-                                    fontWeight: FontWeight.w400,
-                                    fontSize: 18,
-                                    color: Colors.white)),
-                          ],
+                      child: InkWell(
+                        onTap: () {
+                          Get.to(() => VideoCallScreen());
+                        },
+                        child: Container(
+                          height: 130,
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10),
+                              color: Color(0Xff04636b)),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Icon(
+                                Icons.wifi,
+                                size: 60,
+                                color: Color(0XffFFFFFF),
+                              ),
+                              // Text("12",
+                              //     style: TextStyle(
+                              //         fontWeight: FontWeight.w400,
+                              //         fontSize: 18,
+                              //         color: Colors.blue)),
+                              // SizedBox(
+                              //   height: 15,
+                              // ),
+                              Text("Go Live",
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.w400,
+                                      fontSize: 18,
+                                      color: Colors.white)),
+                            ],
+                          ),
                         ),
                       ),
                     ),
@@ -455,7 +461,7 @@ class _DashBordState extends State<DashBord> {
                     Expanded(
                       child: InkWell(
                         onTap: () {
-                          Get.to(() => VideoCallScreen());
+                          Get.to(() => ScheduleScreen());
                         },
                         child: Container(
                           height: 130,
@@ -478,11 +484,14 @@ class _DashBordState extends State<DashBord> {
                               // SizedBox(
                               //   height: 15,
                               // ),
-                              Text("Schedule",
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.w400,
-                                      fontSize: 18,
-                                      color: Colors.white)),
+                              Text(
+                                "Schedule",
+                                style: TextStyle(
+                                  fontWeight: FontWeight.w400,
+                                  fontSize: 18,
+                                  color: Colors.white,
+                                ),
+                              ),
                             ],
                           ),
                         ),
@@ -513,11 +522,14 @@ class _DashBordState extends State<DashBord> {
                             // SizedBox(
                             //   height: 15,
                             // ),
-                            Text("Send Notice",
-                                style: TextStyle(
-                                    fontWeight: FontWeight.w400,
-                                    fontSize: 18,
-                                    color: Colors.white)),
+                            Text(
+                              "Send Notice",
+                              style: TextStyle(
+                                fontWeight: FontWeight.w400,
+                                fontSize: 18,
+                                color: Colors.white,
+                              ),
+                            ),
                           ],
                         ),
                       ),
@@ -535,7 +547,9 @@ class _DashBordState extends State<DashBord> {
                     Expanded(
                       child: InkWell(
                         onTap: () {
-                          Get.to(() => Coursesdetailsuploadscreen());
+                          Get.to(
+                            () => Coursesdetailsuploadscreen(),
+                          );
                         },
                         child: Container(
                           height: 130,
@@ -558,11 +572,14 @@ class _DashBordState extends State<DashBord> {
                               // SizedBox(
                               //   height: 15,
                               // ),
-                              Text("Create Topic",
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.w400,
-                                      fontSize: 18,
-                                      color: Colors.white)),
+                              Text(
+                                "Create Topic",
+                                style: TextStyle(
+                                  fontWeight: FontWeight.w400,
+                                  fontSize: 18,
+                                  color: Colors.white,
+                                ),
+                              ),
                             ],
                           ),
                         ),
@@ -575,8 +592,11 @@ class _DashBordState extends State<DashBord> {
                       child: Container(
                         height: 130,
                         decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10),
-                            color: Color(0Xff04636b)),
+                          borderRadius: BorderRadius.circular(10),
+                          color: Color(
+                            0Xff04636b,
+                          ),
+                        ),
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
@@ -593,11 +613,14 @@ class _DashBordState extends State<DashBord> {
                             // SizedBox(
                             //   height: 15,
                             // ),
-                            Text("Upload Video",
-                                style: TextStyle(
-                                    fontWeight: FontWeight.w400,
-                                    fontSize: 18,
-                                    color: Colors.white)),
+                            Text(
+                              "Upload Video",
+                              style: TextStyle(
+                                fontWeight: FontWeight.w400,
+                                fontSize: 18,
+                                color: Colors.white,
+                              ),
+                            ),
                           ],
                         ),
                       ),
@@ -605,7 +628,7 @@ class _DashBordState extends State<DashBord> {
                   ],
                 ),
               ),
-               SizedBox(
+              SizedBox(
                 height: 10,
               ),
               Padding(
@@ -615,7 +638,9 @@ class _DashBordState extends State<DashBord> {
                     Expanded(
                       child: InkWell(
                         onTap: () {
-                          Get.to(() => VideoCallScreen());
+                          Get.to(
+                            () => VideoCallScreen(),
+                          );
                         },
                         child: Container(
                           height: 130,
@@ -638,11 +663,14 @@ class _DashBordState extends State<DashBord> {
                               // SizedBox(
                               //   height: 15,
                               // ),
-                              Text("Upload MCQ",
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.w400,
-                                      fontSize: 18,
-                                      color: Colors.white)),
+                              Text(
+                                "Upload MCQ",
+                                style: TextStyle(
+                                  fontWeight: FontWeight.w400,
+                                  fontSize: 18,
+                                  color: Colors.white,
+                                ),
+                              ),
                             ],
                           ),
                         ),
@@ -655,8 +683,11 @@ class _DashBordState extends State<DashBord> {
                       child: Container(
                         height: 130,
                         decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10),
-                            color: Color(0Xff04636b)),
+                          borderRadius: BorderRadius.circular(10),
+                          color: Color(
+                            0Xff04636b,
+                          ),
+                        ),
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
@@ -673,11 +704,14 @@ class _DashBordState extends State<DashBord> {
                             // SizedBox(
                             //   height: 15,
                             // ),
-                            Text("Upload Study Material",
-                                style: TextStyle(
-                                    fontWeight: FontWeight.w400,
-                                    fontSize: 15,
-                                    color: Colors.white)),
+                            Text(
+                              "Upload Study Material",
+                              style: TextStyle(
+                                fontWeight: FontWeight.w400,
+                                fontSize: 15,
+                                color: Colors.white,
+                              ),
+                            ),
                           ],
                         ),
                       ),

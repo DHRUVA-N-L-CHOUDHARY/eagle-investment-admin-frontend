@@ -20,8 +20,8 @@ class Coursesdetailsuploadscreen extends StatefulWidget {
 class _CoursesdetailsuploadscreenState
     extends State<Coursesdetailsuploadscreen> {
   final storageRef = FirebaseStorage.instance.ref();
-  String id = FirebaseAuth.instance.currentUser!.uid;
   Future<String> _pickfile() async {
+  String id = FirebaseAuth.instance.currentUser!.uid;
     FilePickerResult? selected = await FilePicker.platform
         .pickFiles(type: FileType.custom, allowedExtensions: ['pdf']);
     File file = File(selected?.files.first.path ?? "");

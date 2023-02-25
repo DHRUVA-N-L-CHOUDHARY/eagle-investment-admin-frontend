@@ -2,6 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:untitled8/firebase_options.dart';
 import 'package:untitled8/screens/login_screen.dart';
 import 'package:untitled8/screens/splash_screen.dart';
@@ -24,6 +25,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
+       theme: ThemeData(textTheme: GoogleFonts.poppinsTextTheme()),
       home: const SplashScreen(),
     );
   }
